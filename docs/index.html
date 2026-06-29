@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quant Data Engine Lab</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #17202a;
+        --muted: #5c6a72;
+        --line: #d8dee4;
+        --paper: #f8fafc;
+        --accent: #0f766e;
+        --accent-2: #b45309;
+        --panel: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Inter, "Segoe UI", Arial, sans-serif;
+        color: var(--ink);
+        background: var(--paper);
+      }
+
+      header {
+        min-height: 82vh;
+        display: grid;
+        align-items: center;
+        padding: 56px 7vw 40px;
+        background:
+          linear-gradient(rgba(248, 250, 252, 0.88), rgba(248, 250, 252, 0.94)),
+          url("https://images.unsplash.com/photo-1642790106117-e829e14a795f?auto=format&fit=crop&w=1800&q=80");
+        background-size: cover;
+        background-position: center;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .hero {
+        max-width: 920px;
+      }
+
+      .eyebrow {
+        color: var(--accent);
+        font-weight: 700;
+        letter-spacing: 0;
+        margin-bottom: 16px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(44px, 8vw, 88px);
+        line-height: 0.98;
+        letter-spacing: 0;
+      }
+
+      .lead {
+        max-width: 720px;
+        margin: 24px 0 0;
+        color: var(--muted);
+        font-size: 20px;
+        line-height: 1.7;
+      }
+
+      main {
+        padding: 48px 7vw 72px;
+      }
+
+      section {
+        max-width: 1100px;
+        margin: 0 auto 48px;
+      }
+
+      h2 {
+        font-size: 28px;
+        margin: 0 0 18px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 16px;
+      }
+
+      .card {
+        min-height: 160px;
+        padding: 22px;
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+      }
+
+      .card strong {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
+
+      .card p,
+      li {
+        color: var(--muted);
+        line-height: 1.65;
+      }
+
+      .timeline {
+        display: grid;
+        gap: 14px;
+        padding: 0;
+        list-style: none;
+      }
+
+      .timeline li {
+        padding: 18px 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        min-height: 28px;
+        padding: 3px 10px;
+        margin-right: 8px;
+        border-radius: 999px;
+        background: #ecfdf5;
+        color: var(--accent);
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      a {
+        color: var(--accent-2);
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="hero">
+        <div class="eyebrow">Chapter-based Quant Trading Study</div>
+        <h1>Quant Data Engine Lab</h1>
+        <p class="lead">
+          从零搭建量化交易数据引擎：先建立干净、可测试、可扩展的数据底座，再逐章推进到回测、因子研究和策略评估。
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <h2>第 1 章：数据引擎</h2>
+        <div class="grid">
+          <article class="card">
+            <strong>Source</strong>
+            <p>从 CSV 开始接入行情数据，后续可以替换为数据库、交易所 API 或第三方数据服务。</p>
+          </article>
+          <article class="card">
+            <strong>Model</strong>
+            <p>统一 OHLCV 数据结构，让后续研究代码不被数据来源绑住。</p>
+          </article>
+          <article class="card">
+            <strong>Engine</strong>
+            <p>提供 symbols、history、latest 等查询接口，为回测和因子分析准备稳定入口。</p>
+          </article>
+          <article class="card">
+            <strong>Cache</strong>
+            <p>预留本地缓存层，减少重复读取和未来的网络请求成本。</p>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>学习路线</h2>
+        <ul class="timeline">
+          <li><span class="tag">Done</span> Chapter 01: 从零搭建数据引擎</li>
+          <li><span class="tag">Next</span> Chapter 02: 回测引擎与撮合逻辑</li>
+          <li><span class="tag">Later</span> Chapter 03: 因子研究与信号生成</li>
+          <li><span class="tag">Later</span> Chapter 04: 风控、组合和绩效评估</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>项目入口</h2>
+        <p>
+          查看仓库代码、章节笔记和测试用例：
+          <a href="https://github.com/">GitHub Repository</a>
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
+
