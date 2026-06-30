@@ -24,6 +24,12 @@ quant-data-engine-lab/
 │       └── sample_prices.csv
 ├── docs/
 │   └── index.html
+├── data/
+│   └── raw/
+│       └── akshare/
+│           ├── 000001_SZ_daily_20250629_20260629.csv
+│           ├── 601138_daily_20250630_20260629.csv
+│           └── README.md
 ├── src/
 │   └── quant_data_engine/
 │       ├── __init__.py
@@ -53,6 +59,13 @@ pytest
 python chapters/01-data-engine/run_demo.py
 ```
 
+## Raw Daily Data
+
+`data/raw/akshare/` 保存通过 AKShare 获取或整理的 A 股日线 K 线数据：
+
+- `000001_SZ_daily_20250629_20260629.csv`：平安银行，实际交易日 `2025-06-30` 至 `2026-06-29`，`242` 行
+- `601138_daily_20250630_20260629.csv`：601138.SH，实际交易日 `2025-06-30` 至 `2026-06-02`，`242` 行
+
 ## Public Page
 
 仓库包含 `docs/index.html`，可以通过 GitHub Pages 对外展示学习路线和章节入口。
@@ -64,4 +77,3 @@ python chapters/01-data-engine/run_demo.py
 - Source: Deploy from a branch
 - Branch: `main`
 - Folder: `/docs`
-

@@ -2,7 +2,7 @@
 
 这里保存通过 AKShare 公开接口获取的 A 股日线数据。
 
-## Current File
+## Current Files
 
 - `000001_SZ_daily_20250629_20260629.csv`
 - 股票：`000001.SZ`
@@ -11,10 +11,18 @@
 - 实际交易日：`2025-06-30` 至 `2026-06-29`
 - 行数：`242`
 
+- `601138_daily_20250630_20260629.csv`
+- 股票：`601138.SH`
+- 数据源：`akshare.stock_zh_a_hist`
+- 区间：`2025-06-30` 至 `2026-06-29`
+- 实际交易日：`2025-06-30` 至 `2026-06-02`
+- 行数：`242`
+
 ## Reproduce
 
 ```powershell
 python scripts/fetch_akshare_daily.py --symbol 000001
+python scripts/fetch_akshare_daily.py --symbol 601138 --start-date 20250630 --end-date 20260629
 ```
 
 ## Columns
