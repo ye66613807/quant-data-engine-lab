@@ -22,6 +22,12 @@ print(engine.history("AAPL"))
 print(engine.latest("MSFT"))
 ```
 
+## 日收盘价曲线
+
+![000001.SZ daily close price](assets/000001_SZ_daily_close.svg)
+
+数据来自 `data/raw/akshare/000001_SZ_daily_20250629_20260629.csv`，展示 `000001.SZ` 每日收盘价走势。
+
 ## 下一步
 
 - 增加真实数据源适配器
@@ -29,4 +35,3 @@ print(engine.latest("MSFT"))
 - 增加复权处理
 - 增加分钟线/日线频率转换
 - 为第 2 章回测引擎提供稳定接口
-
