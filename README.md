@@ -30,6 +30,9 @@ quant-data-engine-lab/
 │           ├── 000001_SZ_daily_20250629_20260629.csv
 │           ├── 601138_daily_20250630_20260629.csv
 │           └── README.md
+├── scripts/
+│   ├── fetch_akshare_daily.py
+│   └── plot_daily_close.py
 ├── src/
 │   └── quant_data_engine/
 │       ├── __init__.py

@@ -28,6 +28,16 @@ print(engine.latest("MSFT"))
 
 数据来自 `data/raw/akshare/000001_SZ_daily_20250629_20260629.csv`，展示 `000001.SZ` 每日收盘价走势。
 
+![601138.SH daily close price](assets/601138_SH_daily_close.svg)
+
+数据来自 `data/raw/akshare/601138_daily_20250630_20260629.csv`，展示 `601138.SH` 每日收盘价走势。
+
+使用 matplotlib 重新生成趋势线：
+
+```powershell
+python scripts/plot_daily_close.py data/raw/akshare/601138_daily_20250630_20260629.csv chapters/01-data-engine/assets/601138_SH_daily_close.svg
+```
+
 ## 下一步
 
 - 增加真实数据源适配器
